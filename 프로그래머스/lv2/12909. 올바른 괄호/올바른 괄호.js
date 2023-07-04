@@ -1,15 +1,17 @@
 function solution(s){
-    var arr = s.split("");
-    var arr2 = [];
+    let arr = [...s];
+    let cnt = 0;
     
-    if (arr[0] === ")" || arr[arr.length-1] === "(") return false; 
+    if(arr === ')' || arr[arr.length-1] === '(') return false;
     
-    for (var i = 0; i < arr.length; i++) {  
-        arr2.push(arr[i]);
-        if (arr[i] === ")") {
-            arr2.pop();
-            arr2.pop();
+    for(const x of arr){
+        if(x === '(') {
+            cnt += 1;
+        }else {
+            cnt -= 1;
         }
+        
+        if(cnt < 0) return false;
     }
-    return arr2.length === 0 ? true : false;
+    return !cnt;
 }
