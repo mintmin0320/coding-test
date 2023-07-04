@@ -1,10 +1,12 @@
-function solution(arr)
-{
-    var answer = [];
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] !== arr[i + 1]) {
-        answer.push(arr[i]);
-    }
-  }
-  return answer;
+function solution(arr){
+    let answer = [];
+    let temp = 0;
+    
+    arr.forEach((v,i, arr) => {
+        if(answer[answer.length-1] !== v){
+            answer.push(v);
+        }
+    });
+    
+    return answer;
 }
