@@ -19,5 +19,5 @@ for (let i = 1; i <= input[0]; i++) {
     continue;
   };
 
-  console.log(parseInt(factorial(right) / (factorial(left) * factorial(right - left)) + 0.5));
+  console.log(Math.round(factorial(right) / (factorial(left) * factorial(right - left))));
 };
