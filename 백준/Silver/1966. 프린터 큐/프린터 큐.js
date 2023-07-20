@@ -27,7 +27,6 @@ class Queue {
   }
 };
 
-
 let [n, ...arr] = input;
 arr = arr.map((item) => item.split(' ').map(Number));
 
